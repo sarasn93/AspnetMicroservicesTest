@@ -14,7 +14,7 @@ namespace Basket.Api.Repository
 
         public BasketRepository(IDistributedCache redisCache)
         {
-            redisCache = _redisCache ?? throw new ArgumentNullException(nameof (redisCache));
+            _redisCache = redisCache ?? throw new ArgumentNullException(nameof (redisCache));
         }
 
         public async Task DeleteBasket(string userName)
